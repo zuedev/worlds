@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "del-cli dist/ && eleventy --input=src --output=dist",
+    "dev": "del-cli dist/ && eleventy --input=src --output=dist --serve --incremental"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "del-cli": "^5.1.0"
+  }
+}
