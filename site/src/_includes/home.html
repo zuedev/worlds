@@ -4,18 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ title }}</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
-    />
     <style>
-      body {
-        margin: 1rem;
-        max-width: 400px;
+      html {
+        font-family: monospace;
       }
 
-      h1:first-child {
-        margin-top: 0;
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
       }
     </style>
   </head>
