@@ -15,11 +15,25 @@
         font-family: "Fira Code";
         text-align: justify;
       }
+      
+      /* hide scrollbar but keep function */
+      ::-webkit-scrollbar {
+        display: none;
+      }
 
       body {
         margin: 0; /* Remove default margin */
         max-width: 210mm; /* A4 paper width */
         margin: 0 auto; /* Center the content */
+        background: #333;
+      }
+
+      main {
+        padding: 0 4em;
+      }
+
+      #book {
+        background: white;
       }
 
       a {
@@ -91,52 +105,67 @@
           background: unset;
           padding: unset;
         }
+
+        body {
+          background: unset;
+        }
+
+        main {
+          padding: unset;
+          margin: 1em 0; /* Add margin for printing on content y-axis */
+        }
+
+        #book {
+          background: unset;
+        }
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>
-        DRPDED.NET
-        <span>
-          A Fan-Made Supplement for
-          <a href="https://rtalsoriangames.com/cyberpunk/">Cyberpunk RED</a>
-        </span>
-      </h1>
-    </header>
-    <main>{{ content }}</main>
-    <footer>
-      <h2>Footer</h2>
-      <hr />
-      <h3>Credits & Thanks</h3>
-      <p>
-        This supplement is a fan-made project created by <b>Alex <a href="https://zue.dev">"zuedev"</a> Pooley</b> inspired by and is designed to be used with the Cyberpunk RED tabletop roleplaying game.
-      </p>
-      <p>
-        This supplement could only be made possible by the following amazing people:
-        <ul>
-          <li>
-            <b>Mike Pondsmith</b> for creating the Cyberpunk universe and being a huge inspiration to me.
-          </li>
-          <li>
-            <b>R. Talsorian Games</b> and everyone involved in the creation, publication, and distribution of Cyberpunk RED.
-          </li>
-          <li>
-            <b>CD Projekt RED</b> for creating the Cyberpunk 2077 video game, which relit my love for the Cyberpunk universe.
-          </li>
-        </ul>
-      </p>
-      <h3>The Legal Bit</h3>
-      <p>
-        This supplement is a fan-made project and is not affiliated with <a href="https://rtalsoriangames.com/">R. Talsorian Games</a> or <a href="https://www.cdprojektred.com">CD Projekt RED</a>. Cyberpunk RED and all associated properties are trademarks of R. Talsorian Games. All rights reserved.
-      </p>
-      <p>
-        All original content in this supplement is released under the Unlicense, therefore dedicated to the public domain. You can find the full text of the Unlicense at <a href="https://unlicense.org">unlicense.org</a>. This means you can use, modify, and distribute this supplement however you like, without needing to ask for permission or give credit. Keep in mind that this supplement is a fan-made project based on and inspired by content that is licensed under different terms. Stay respectful of the original creators and their work.
-      </p>
-      <p>
-        If you have any questions or concerns about this supplement, please contact me at <a href="mailto:drpded@zue.dev"><code>drpded@zue.dev</code></a>.
-      </p>
-    </footer>
+    <div id="book">
+      <header>
+        <h1>
+          DRPDED.NET
+          <span>
+            A Fan-Made Supplement for
+            <a href="https://rtalsoriangames.com/cyberpunk/">Cyberpunk RED</a>
+          </span>
+        </h1>
+      </header>
+      <main>{{ content }}</main>
+      <footer>
+        <h2>Footer</h2>
+        <hr />
+        <h3>Credits & Thanks</h3>
+        <p>
+          This supplement is a fan-made project created by <b>Alex <a href="https://zue.dev">"zuedev"</a> Pooley</b> inspired by and is designed to be used with the Cyberpunk RED tabletop roleplaying game.
+        </p>
+        <p>
+          This supplement could only be made possible by the following amazing people:
+          <ul>
+            <li>
+              <b>Mike Pondsmith</b> for creating the Cyberpunk universe and being a huge inspiration to me.
+            </li>
+            <li>
+              <b>R. Talsorian Games</b> and everyone involved in the creation, publication, and distribution of Cyberpunk RED.
+            </li>
+            <li>
+              <b>CD Projekt RED</b> for creating the Cyberpunk 2077 video game, which relit my love for the Cyberpunk universe.
+            </li>
+          </ul>
+        </p>
+        <h3>The Legal Bit</h3>
+        <p>
+          This supplement is a fan-made project and is not affiliated with <a href="https://rtalsoriangames.com/">R. Talsorian Games</a> or <a href="https://www.cdprojektred.com">CD Projekt RED</a>. Cyberpunk RED and all associated properties are trademarks of R. Talsorian Games. All rights reserved.
+        </p>
+        <p>
+          All original content in this supplement is released under the Unlicense, therefore dedicated to the public domain. You can find the full text of the Unlicense at <a href="https://unlicense.org">unlicense.org</a>. This means you can use, modify, and distribute this supplement however you like, without needing to ask for permission or give credit. Keep in mind that this supplement is a fan-made project based on and inspired by content that is licensed under different terms. Stay respectful of the original creators and their work.
+        </p>
+        <p>
+          If you have any questions or concerns about this supplement, please contact me at <a href="mailto:drpded@zue.dev"><code>drpded@zue.dev</code></a>.
+        </p>
+      </footer>
+    </div>
   </body>
   <script type="module">
     document.addEventListener("DOMContentLoaded", () => {
