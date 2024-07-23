@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DRPDED.NET | A Fan-Made Supplement for Cyberpunk RED</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
+      html {
+        font-family: "Fira Code";
+        text-align: justify;
+      }
+
+      body {
+        margin: 0; /* Remove default margin */
+        max-width: 210mm; /* A4 paper width */
+        margin: 0 auto; /* Center the content */
+      }
+
+      a {
+        color: inherit;
+        text-decoration: dotted underline;
+      }
+
+      header {
+        background: black;
+        color: white;
+        padding: 1em;
+      }
+
+      header h1 {
+        margin: 0; /* Remove top margin */
+        color: yellow;
+      }
+
+      header h1 span {
+        font-size: 0.5em;
+        display: block;
+        margin-top: 0.5em;
+        color: white;
+      }
+
+      footer {
+        background: yellow;
+        padding: 1em;
+      }
+
+      footer > *:first-child {
+        margin: 0; /* Remove top margin */
+      }
+
+      footer > *:last-child {
+        margin-bottom: 0; /* Remove bottom margin */
+      }
+
+      footer hr {
+        border: 1px solid black;
+      }
+
+      /* Printing styles */
+      @media print {
+        body {
+          margin: 1in; /* Re-add margin for printing */
+        }
+
+        /* Unset a bunch of styles */
+        a {
+          text-decoration: unset;
+        }
+
+        header {
+          background: unset;
+          color: unset;
+          padding: unset;
+        }
+
+        header h1 {
+          color: unset;
+        }
+
+        header h1 span {
+          color: unset;
+        }
+
+        footer {
+          background: unset;
+          padding: unset;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        DRPDED.NET
+        <span>
+          A Fan-Made Supplement for
+          <a href="https://rtalsoriangames.com/cyberpunk/">Cyberpunk RED</a>
+        </span>
+      </h1>
+    </header>
+    <main>{{ content }}</main>
+    <footer>
+      <h2>Footer</h2>
+      <hr />
+      <h3>Credits & Thanks</h3>
+      <p>
+        This supplement is a fan-made project created by <b>Alex <a href="https://zue.dev">"zuedev"</a> Pooley</b> inspired by and is designed to be used with the Cyberpunk RED tabletop roleplaying game.
+      </p>
+      <p>
+        This supplement could only be made possible by the following amazing people:
+        <ul>
+          <li>
+            <b>Mike Pondsmith</b> for creating the Cyberpunk universe and being a huge inspiration to me.
+          </li>
+          <li>
+            <b>R. Talsorian Games</b> and everyone involved in the creation, publication, and distribution of Cyberpunk RED.
+          </li>
+          <li>
+            <b>CD Projekt RED</b> for creating the Cyberpunk 2077 video game, which relit my love for the Cyberpunk universe.
+          </li>
+        </ul>
+      </p>
+      <h3>The Legal Bit</h3>
+      <p>
+        This supplement is a fan-made project and is not affiliated with <a href="https://rtalsoriangames.com/">R. Talsorian Games</a> or <a href="https://www.cdprojektred.com">CD Projekt RED</a>. Cyberpunk RED and all associated properties are trademarks of R. Talsorian Games. All rights reserved.
+      </p>
+      <p>
+        All original content in this supplement is released under the Unlicense, therefore dedicated to the public domain. You can find the full text of the Unlicense at <a href="https://unlicense.org">unlicense.org</a>. This means you can use, modify, and distribute this supplement however you like, without needing to ask for permission or give credit. Keep in mind that this supplement is a fan-made project based on and inspired by content that is licensed under different terms. Stay respectful of the original creators and their work.
+      </p>
+      <p>
+        If you have any questions or concerns about this supplement, please contact me at <a href="mailto:drpded@zue.dev"><code>drpded@zue.dev</code></a>.
+      </p>
+    </footer>
+  </body>
+  <script type="module">
+    document.addEventListener("DOMContentLoaded", () => {
+      // find text and replace with inline links
+      [
+        [
+          "Cyberpunk RED",
+          "https://rtalsoriangames.com/cyberpunk/",
+          "red"
+        ],
+        [
+          "Mike Pondsmith",
+          "https://en.wikipedia.org/wiki/Mike_Pondsmith",
+          "inherit"
+        ],
+        [
+          "R. Talsorian Games",
+          "https://rtalsoriangames.com/",
+          "inherit"
+        ],
+        [
+          "CD Projekt RED",
+          "https://www.cdprojektred.com",
+          "inherit"
+        ],
+      ].forEach(([text, url, colour]) => {
+        document.body.innerHTML = document.body.innerHTML.replace(
+          new RegExp(text, "gi"),
+          `<a href="${url}" style="color: ${colour}">${text}</a>`
+        );
+      });
+    });
+  </script>
+</html>
